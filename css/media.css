@@ -1,0 +1,424 @@
+body:after {
+    content: "1280px";
+    position: fixed;
+    right: 2px;
+    top: 2px;
+    padding: 10px;
+    font-size: 12px;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 2;
+}
+
+/* 1280px и более – PC. */
+@media screen and (max-width: 1279px) {
+
+    .container {
+        padding: 2vw;
+        gap: 2vw;
+    }
+
+    .left-top,
+    .left-bottom {
+        padding: 0 2.54vw 2.54vw;
+        border-radius: 1.95vw;
+    }
+
+    .left-top {
+        padding-top: 2.54vw;
+    }
+
+    .left-top::before {
+        content: "";
+        border-right: 31.0vw solid transparent;
+        border-top: 28.17vw solid #0084c7;
+    }
+
+    .right {
+        padding: 0 2.54vw 2.54vw;
+        border-radius: 1.95vw;
+        gap: 1.5vw;
+    }
+
+    .my-profile h1 {
+        letter-spacing: 1.33vw;
+        line-height: 8.44vw;
+        font-size: 7.42vw;
+    }
+
+    .my-profile h2 {
+        letter-spacing: 0.31vw;
+        line-height: 1.95vw;
+        font-size: 1.95vw;
+    }
+
+    .contact h5 {
+        margin-top: 1.17vw;
+    }
+
+    .hobby-items {
+        margin-top: 2.34vw;
+    }
+
+    .head-line {
+        font-size: 2.11vw;
+    }
+
+    .article-items {
+        margin-top: 2.34vw;
+        row-gap: 1.5vw;
+    }
+
+    .article-header, .article-body  {
+        column-gap: 1.5vw;
+    }
+
+}
+
+/* 1024px – Планшеты (альбомная ориентация); */
+@media screen and (max-width: 1024px) {
+
+    body:after {
+        content: "1024px";
+    }
+
+    .container {
+        max-width: 1024px;
+        height: 1530px;
+    }
+
+    .head-line {
+        letter-spacing: 1px;
+        font-size: 22px;
+    }
+
+    .head-line::after {
+        content: "";
+        width: 29px;
+        height: 4px;
+        top: -3px;
+    }
+
+    .my-profile h2 {
+        letter-spacing: 3px;
+        line-height: 20px;
+        font-size: 20px;
+    }
+
+    .about-me p {
+        line-height: 17px;
+        font-size: 14px;
+    }
+
+    .contact h5 {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .contact p {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .hobby h5 {
+        line-height: 35px;
+        font-size: 13px;
+    }
+
+    .hobby img {
+        border-radius: 3px;
+    }
+
+    h4.article-left {
+        font-size: 19px;
+    }
+
+    h4.article-right {
+        font-size: 19px;
+    }
+
+    p.article-left {
+        letter-spacing: 1px;
+        font-size: 17px;
+    }
+
+    p.article-right {
+        line-height: 19px;
+        font-size: 17px;
+    }
+
+    ul.article-right {
+        line-height: 20px;
+        font-size: 18px;
+    }
+
+}
+
+/* 768px – Планшеты (портретная ориентация); */
+@media screen and (max-width: 768px) {
+
+    body:after {
+        content: "768px";
+    }
+
+    .container {
+        height: 1470px;
+    }
+
+    .head-line {
+        font-size: 20px;
+    }
+
+    .my-profile h2 {
+        letter-spacing: 3px;
+        line-height: 18px;
+        font-size: 18px;
+    }
+
+    .hobby-items div {
+        flex-basis: 100%;
+    }
+
+    h4.article-left {
+        font-size: 17px;
+    }
+
+    h4.article-right {
+        font-size: 17px;
+    }
+
+    p.article-left {
+        font-size: 15px;
+    }
+
+    p.article-right {
+        line-height: 17px;
+        font-size: 15px;
+    }
+
+    ul.article-right {
+        line-height: 16px;
+        font-size: 15px;
+    }
+
+    /*************************************************
+      SHRINK ARTICLES TO SINGLE COLUMN
+    *************************************************/
+
+    .article-item {
+        row-gap: 0;
+    }
+
+    .article-header {
+        flex-direction: column-reverse;
+    }
+
+    .article-body {
+        flex-direction: column;
+    }
+
+    h4.article-left {
+        text-align: justify;
+    }
+
+    p.article-left {
+        text-align: justify;
+    }
+
+    /************************************************/
+}
+
+/* 600px – Небольшие планшеты; */
+@media screen and (max-width: 600px) {
+
+    body:after {
+        content: "600px";
+    }
+
+    .head-line {
+        font-size: 18px;
+    }
+
+    .my-profile h2 {
+        letter-spacing: 2px;
+        line-height: 16px;
+        font-size: 16px;
+    }
+
+    h4.article-left {
+        font-size: 16px;
+    }
+
+    h4.article-right {
+        font-size: 16px;
+    }
+
+    p.article-left {
+        font-size: 14px;
+    }
+
+    p.article-right {
+        line-height: 17px;
+        font-size: 14px;
+    }
+
+    /*************************************************
+      SHRINK PAGE TO SINGLE COLUMN
+    *************************************************/
+
+    .container {
+        height: unset;
+        flex-direction: column;
+        row-gap: 0;
+    }
+
+    .left-top {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .left-bottom {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .left-bottom::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        border-left: 31.0vw solid transparent;
+        border-bottom: 28.17vw solid #0084c7;
+    }
+
+    .left-bottom {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        order: 3;
+    }
+
+    .right {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .article-items {
+        row-gap: 2.34vw;
+    }
+
+    .my-profile {
+        width: 65%;
+    }
+
+    .my-profile h1 {
+        letter-spacing: 1.33vw;
+        line-height: 8.44vw;
+        font-size: 8.44vw;
+    }
+
+    .my-picture {
+        width: 25.87vw;
+    }
+
+    .left-top .head-line,
+    .left-bottom .head-line {
+        text-align: left;
+    }
+
+    .left-top .head-line::after,
+    .left-bottom .head-line::after {
+        margin: 0;
+    }
+
+    .left-bottom .contact {
+        width: 100%;
+        order: 2;
+    }
+
+    .hobby {
+        width: 100%;
+    }
+
+    .hobby-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .hobby-items div {
+        flex-basis: 35%;
+    }
+
+    /************************************************/
+}
+
+
+/* 480px – мобильное устройство (альбомная ориентация); */
+@media screen and (max-width: 480px) {
+
+    body:after {
+        content: "480px";
+    }
+
+    .head-line {
+        font-size: 16px;
+    }
+
+    .my-profile h2 {
+        letter-spacing: 1px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    h4.article-left {
+        font-size: 14px;
+    }
+
+    h4.article-right {
+        font-size: 14px;
+    }
+
+    p.article-left {
+        font-size: 14px;
+    }
+}
+
+/* 320px – мобильное устройство (портретная ориентация); */
+@media screen and (max-width: 320px) {
+
+    body:after {
+        content: "320px";
+    }
+
+    .head-line {
+        font-size: 15px;
+    }
+
+    .my-profile h2 {
+        line-height: 14px;
+        font-size: 13px;
+    }
+}
+
+/*
+  320px  – 0,25
+  480px  – 0,375
+  600px  – 0,46875
+  768px  – 0,6
+  1024px – 0,8
+  1280px - 1
+*/

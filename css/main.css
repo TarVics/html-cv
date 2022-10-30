@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/************************************************/
+
+.container {
+  max-width: 1280px;
+  height: 1796px;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: start;
+  background-color: #f2f2f2;
+}
+
+.left-top,
+.left-bottom,
+.right {
+  padding: 0 33px 33px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ededed;
+}
+
+.left-top {
+  padding-top: 33px;
+}
+
+.left-top {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.left-top::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-right: 405px solid transparent;
+  border-top: 370px solid #0084c7;
+}
+
+/************************************************/
+
+.left-top {
+  width: 33.4%;
+  /*flex-basis: 57%;*/
+  order: 0;
+}
+
+.left-bottom {
+  width: 33.4%;
+  /*flex-basis: calc(43% - 30px);*/
+  flex-grow: 1;
+  order: 1;
+}
+
+.right {
+  width: 63.92%;
+  flex-basis: 100%;
+  order: 2;
+}
+
+/*************************************************
+  Used by: 
+    .left-top .about-me,
+    .left-bottom .contact,
+    .left-bottom .hobby
+    .right .experience,
+    .right .education,
+    .right .characteristic
+*************************************************/
+
+.head-line {
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
+  line-height: 3em;
+  font-family: "Raleway", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #414142;
+}
+
+.head-line::before {
+  content: "";
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: 2px;
+  top: 3em;
+  background-color: #939598;
+}
+
+.head-line::after {
+  content: "";
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 36px;
+  height: 5px;
+  top: -3px;
+  background-color: #31afd8;
+}
+
+.right .head-line {
+  text-align: left;
+}
+
+.right .head-line::after {
+  margin: 0;
+}
+
+/************************************************/
+
+.my-picture img {
+  width: 100%;
+  border-radius: 50%;
+  /* clip-path: circle(166px at center); */
+}
+
+/****************************************/
+
+.my-profile h1 {
+  letter-spacing: 17px;
+  line-height: 108px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 95px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0084c7;
+}
+
+.my-profile h2 {
+  letter-spacing: 4px;
+  line-height: 25px;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  color: #636466;
+}
+
+/****************************************/
+
+.about-me p {
+  line-height: 21px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: justify;
+  color: #636466;
+}
+
+/****************************************/
+
+.contact h5 {
+  margin-top: 15px;
+  line-height: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #414142;
+}
+
+.contact p {
+  line-height: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: #636466;
+}
+
+/****************************************/
+
+.hobby h5 {
+  line-height: 58px;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  color: #636466;
+}
+
+.hobby img {
+  width: 30%;
+  max-width: 30px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.hobby-items {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hobby-items div {
+  flex-basis: 50%;
+}
+
+/*************************************************
+  Used by: 
+    .right .experience
+    .right .education
+    .right .characteristic
+*************************************************/
+
+.article-items {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.article-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.article-body {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 2px;
+}
+
+/************************************************/
+
+h4.article-left {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: right;
+  color: #414142;
+}
+
+h4.article-right {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #414142;
+}
+
+p.article-left {
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: right;
+  color: #636466;
+}
+
+p.article-right {
+  line-height: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+  color: #636466;
+}
+
+ul.article-right {
+  margin-left: 16px;
+  line-height: 21px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+  color: #636466;
+}
+
+ul.article-right li {
+  margin-top: 5px;
+}
+
+.article-left:nth-child(1) {
+  flex-basis: 29%;
+}
+
+.article-right:nth-child(2) {
+  flex-basis: 71%;
+}
+
+.article-right:nth-child(1) {
+  flex-basis: 100%;
+}
+
+.article-right:nth-child(1) {
+  margin-top: 0;
+}
+
+/************************************************/
